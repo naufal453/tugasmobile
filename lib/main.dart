@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'media_page.dart'; // Impor file media_page.dart
 import 'data_storage_page.dart'; // Impor file data_storage_page.dart
+import 'notification_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -38,6 +39,13 @@ class MyHomePage extends StatelessWidget {
     );
   }
 
+  void _navigateToNotificationPage(BuildContext context) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => NotificationPage()),
+    );
+  }
+
   void _showMessage(String message) {
     print(message); // Ganti dengan dialog atau snackbar jika perlu
   }
@@ -46,7 +54,7 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Halaman Utama'),
+        title: Text('Naufal 1201220446'),
       ),
       body: Center(
         child: Column(
@@ -63,8 +71,8 @@ class MyHomePage extends StatelessWidget {
             ),
             SizedBox(height: 20),
             ElevatedButton(
-              onPressed: () => _showMessage('Tombol 3 ditekan'),
-              child: Text('Tombol 3'),
+              onPressed: () => _navigateToNotificationPage(context),
+              child: Text('Tombol 3 - Notification'),
             ),
             SizedBox(height: 20),
             ElevatedButton(
